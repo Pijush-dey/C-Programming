@@ -1,0 +1,2431 @@
+/*    AUTHOR: Pijush Kishor Dey
+     COLLAGE: Calcutta Institute of Engineering & Management [B.Tech 1st year - C.S.E]
+
+             OUR TARGET IS WRITE PROGRAM IN A OPTIMISE WAY - MEMORY EFFICIENT
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   
+Addition of two numbers-------------------------------------------------------------------<1>
+Find out the Area and Perimeter of a circle-----------------------------------------------<2>
+Transform the temperature from Farhenite to Celsius scale---------------------------------<3>
+average of numbers from n1 to n2----------------------------------------------------------<4>
+Find out the Area of a Triangle-----------------------------------------------------------<5>
+Check those two arrays are equal or not---------------------------------------------------<6>
+Choose the greater number between two/three/multiple numbers using array -----------------<7>
+Define the number is even or odd----------------------------------------------------------<8>
+Find out the Leap Year--------------------------------------------------------------------<9>
+Print three numbers according to their value---------------------------------------------<10>
+Give a grade to  a student---------------------------------------------------------------<11>                
+1^1+2^2+3^2+3^2+4^2+..................+n^2 -print this-----------------------------------<12>
+2+4+6+8+10+12.................+98+100 -print this----------------------------------------<13>
+Made a salary chart of some school student's---------------------------------------------<14>
+summation of odd numbers from 1 to n-----------------------------------------------------<15>
+summation of digits of a given number----------------------------------------------------<16>
+Find out the number is palindrome or not-------------------------------------------------<17>
+Find factorial---------------------------------------------------------------------------<18>
+x^n - Print this value-------------------------------------------------------------------<19>
+Find out the number is Prime or not------------------------------------------------------<20>
+calculate the sum of prime numbers in a given range--------------------------------------<21>
+Find Armstrong number or not-------------------------------------------------------------<22>
+Fibonacci series to a certain number of elements-----------------------------------------<23>
+Fibonacci series to a certain number-----------------------------------------------------<24>
+Find the Nth term of the fibonacci series------------------------------------------------<25>
+How to make calculator-------------------------------------------------------------------<26>
+Making a list of schools and the departments under them----------------------------------<27>
+n!+(n+1)!+(n+2)!+(n+3)!....................+m! -find the value---------------------------<28>
+                                  *
+                                  **
+                                  ***
+Print star & Reverse Star pattern ****---------------------------------------------------<29>
+                                  ****
+                                  ***
+                                  **
+                                  *
+                        *****
+                         ****
+ Print this star pattern  ***-----------------------------------------------------------<30>
+                           **
+                            *
+                              *
+                             **
+Print this star pattern     ***---------------------------------------------------------<31>
+                           ****
+                          *****
+Check that  145 = 1! +4! +5!  or not----------------------------------------------------<32>         
+Check the number is Harshad / Niven number or not---------------------------------------<33> 
+Calculate the va;ue of = nCr -----------------------------------------------------------<34> 
+                              *
+                             *** 
+                            *****
+                           *******
+Print Diamond structure   ********* ---------------------------------------------------<36>
+                           *******
+                            *****
+                             ***
+                              *  
+                  *********   
+                   *******
+Print a Triangle    ***** -------------------------------------------------------------<37>
+                     ***
+                      *
+Make a list of 3 drivers of their NAME, ID, ROUTE , TOTAL COST using Structure---------<38> 
+Input:
+<h1> This is a heading </h1> 
+Output:
+This is a heading-------------------------PARSER THIS----------------------------------<39>
+1
+12
+123   Print this-----------------------------------------------------------------------<40>
+1234
+12345                 
+    1
+   12
+  123
+ 1234   Print this--------------------------------------------------------------------<41>
+12345
+
+12345
+ 1234
+  123   Print this--------------------------------------------------------------------<42>
+   12
+    1
+54321
+ 4321
+  321 Print this----------------------------------------------------------------------<43>
+   21
+    1                           
+5
+44
+333  Print this------------------------------------------------------------------------<44>
+2222
+11111  
+1
+22
+111  Print this------------------------------------------------------------------------<45>
+2222
+11111                                                   
+    1
+   121
+  12321   Print this------------------------------------------------------------------<46>
+ 1234321
+123454321
+
+123454321
+ 1234321
+  12321   Print this-------------------------------------------------------------------<47>
+   121
+    1 
+    1
+   121
+  12321   
+ 1234321
+123454321   Print this---------------------------------------------------------------<48>
+ 1234321
+  12321   
+   121
+    1 
+*        *
+**      **
+***    ***
+****  ****
+**********
+**********  Print this----------------------------------------------------------------<49>
+****  ****
+***    ***
+**      **
+*        *
+**********
+****  ****
+***    ***
+**      **     
+*        *    Print this--------------------------------------------------------------<50>
+**      **
+***    ***
+****  ****
+**********        
+Using Dynamic Memory Allocation-------------------------------------------------------<51>
+Convert several lines of lowercase into uppercase-------------------------------------<52>
+Repeated averaging of a list of non-zero numbers given by user------------------------<53>
+Encoding a string of characters--------------------------------------------------------<   >
+We will replace all the digits and letters with the next character)-------------------<55>
+Calculating depreciation with the help of three methods-------------------------------<56>
+Rearrange the numbers in a given list-------------------------------------------------<57>
+Addition of two 2D Arrays-------------------------------------------------------------<58>
+*           *
+  *       *
+    *   *
+      *        Print this-------------------------------------------------------------<59>
+    *   *
+  *       *
+*           *
+******
+*    *
+*    * 
+*    *   Print this-------------------------------------------------------------------<60>
+*    *
+******               
+Insert New value in the array (sorted list)-------------------------------------------<61> 
+Insert New value in the array (unsorted list )----------------------------------------<62>
+Delete an element at desired position from an array.----------------------------------<63>
+Find the second largest element in an array. ----------------------------------------<65>
+Find transpose of a given matrix.-----------------------------------------------------<66>
+Find sum of right diagonals of a matrix-----------------------------------------------<67>
+Find sum of rows an columns of a Matrix-----------------------------------------------<68>
+Sum of the left diagonal of the matrix------------------------------------------------<69>
+Find the sum of rows an columns of a Matrix-------------------------------------------<70> 
+Print the lower triangular of a given matrix, set 0 in lower triangular matrix--------<71>
+print or display upper triangular matrix----------------------------------------------<72>
+calculate determinant of a 3 x 3 matrix-----------------------------------------------<73>
+Determine whether it is a sparse matrix-----------------------------------------------<74>
+
+*/
+
+//Addition of two numbers---------------------------<1>
+#include <stdio.h>
+int sum(int a, int b);
+int main()
+{
+    int a, b;
+    printf("Enter the first number:\n");
+    scanf("%d", &a);
+    printf("Enter the second number:\n");
+    scanf("%d", &b);
+    printf("Your answer is:%d\n", sum(a, b));
+    return 0;
+}
+int sum(int a, int b)
+{
+    return (a + b);
+}
+
+//Find out the Area and Perimeter of a circle-------------------------------<2>
+#include <stdio.h>
+#define pie 3.1447
+int main()
+{
+    int r;
+    printf("Enter the radiuos of the circle:\n");
+    scanf("%d", &r);
+    printf("The perimeter of the circle is:%d\n", 2 * pie * r);
+    printf("The area of the circle is:%d\n", pie * r * r);
+    return 0;
+}
+
+//Transform the temperature from Farhenite to Celsius scale----------------------------<3>
+#include <stdio.h>
+int main()
+{
+    int F;
+    printf("Enter the number:\n");
+    scanf("%d", &F);
+    printf("Temperature in celsius scale is:%3d\n", (5 * F - 160) / 9);
+    return 0;
+}
+
+//average of numbers from n1 to n2------------------------------------------------<4>
+#include <stdio.h>
+int main()
+{
+    int n1, n2, average, sum = 0;
+    printf("Enter the 1st number:");
+    scanf("%d", &n1);
+    printf("\n");
+    printf("Enetr the last number:");
+    scanf("%d", &n2);
+    printf("\n");
+    for (int i = n1; i <= n2; i++)
+    {
+        sum = sum + i;
+    }
+    average = sum / (n2 - n1);
+    printf("The result is:%d\n", average);
+    return 0;
+}
+
+//Find out the Area of a Triangle-----------------------------------------------------<5>
+#include <stdio.h>
+#include <math.h>
+int a_rea(int a, int b, int c);
+int main()
+{
+    int a, b, c;
+    printf("Enter the 1st length of the triangle:\n");
+    scanf("%d", &a);
+    printf("Enter the 2nd length of the triangle:\n");
+    scanf("%d", &b);
+    printf("Enter the 3rd length of the triangle:\n");
+    scanf("%d", &c);
+    printf("The area of the triangle is:%d\n", a_rea(a, b, c));
+    return 0;
+}
+int a_rea(int a, int b, int c)
+{
+    if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || b + c <= a || a + c <= b)
+    {
+        return 0;
+    }
+    else
+    {
+        int S = (a + b + c) / 2;
+        return (sqrt(S * (S - a) * (S - b) * (S - c)));
+    }
+}
+
+//Check those two arrays are equal or not--------------------------------------------<6>
+#include <stdio.h>
+#define MAX 20
+int main()
+{
+    int arr1[] = {2, 45, 756, 4, 97}, num;
+    int arr2[MAX];
+    printf("Enter how many no. of elements you want to enter in the second array:");
+    scanf("%d", &num);
+    for (int i = 0; i < num; i++)
+    {
+        printf("%d no. element of the array is:", i);
+        scanf("%d", &arr2[i]);
+        printf("\n");
+    }
+    for (int i = 0; i < num; i++)
+    {
+        if (arr1[i] != arr2[i])
+        {
+            printf("These two arrays are not equal\n");
+            break;
+        }
+        else
+        {
+            if (i == num - 1)
+                printf("Two arrays are equal\n");
+        }
+    }
+    return 0;
+}
+
+//Choose the greater number between two/three/multiple numbers using array--------------------------<7>
+#include <stdio.h>
+int main()
+{
+    int num[50];
+    int x;
+    printf("Enter the number of elements:");
+    scanf("%d", &x);
+    printf("\n");
+    for (int i = 0; i < x; i++)
+    {
+        printf("%d no. element of the array is:", i);
+        scanf("%d", &num[i]);
+        printf("\n");
+    }
+    int max = num[0];
+    int size = sizeof(num) / sizeof(num[0]);
+    for (int i = 0; i < size; i++)
+    {
+        if (num[i] > max)
+        {
+            max = num[i];
+        }
+    }
+    printf("%d is greater value\n", max);
+    return 0;
+}
+
+//Define the number is even or odd-----------------------------------------------<8>
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the value:\n");
+    scanf("%d", &a);
+    if (a % 2 == 0)
+        printf("%d is a even number\n", a);
+    else
+        printf("%d is a odd number\n", a);
+    return 0;
+}
+
+//Choose the greatest number between three numbers------------------------------------------<9>
+#include <stdio.h>
+int big_num(int a, int b, int c);
+int main()
+{
+    int a, b, c, Answer;
+    printf("Enetr the 1st number:\n");
+    scanf("%d", &a);
+    printf("Enetr the 2nd number:\n");
+    scanf("%d", &b);
+    printf("Enetr the 3rd number:\n");
+    scanf("%d", &c);
+    Answer = big_num(a, b, c);
+    printf("The greater number among them is:%d", Answer);
+    return 0;
+}
+int big_num(int a, int b, int c)
+{
+    if (a > b)
+    {
+        if (a > c)
+        {
+            return a;
+        }
+        else
+        {
+            return c;
+        }
+    }
+    else
+    {
+        if (b > c)
+        {
+            return b;
+        }
+        else
+        {
+            return c;
+        }
+    }
+}
+
+//Find out the Leap Year----------------------------------------<10>
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the year:\n");
+    scanf("%d", &a);
+    (a%100==0)?((a%400==0)?(printf("%d is a leap year\n",a)):(printf("%d is not a leap year\n",a))):((a%4==0)?(printf("%d is a leap year\n",a):(printf("%d is not a leap\n",a)));
+    return 0;
+}
+
+//Print three numbers according to their value---------------------------<11>
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter the 1st number:\n");
+    scanf("%d", &a);
+    printf("Enter the 2nd number:\n");
+    scanf("%d", &b);
+    printf("Enter the 3rd number:\n");
+    scanf("%d", &c);
+    if (a > b)
+    {
+        if (a > c)
+        {
+            if (b > c)
+            {
+                printf("a>b>c");
+            }
+            else
+            {
+                printf("a>c>b");
+            }
+        }
+        else
+        {
+            printf("c>a>b");
+        }
+    }
+    else
+    {
+        if (b > c)
+        {
+            if (a > c)
+            {
+                printf("b>a>c");
+            }
+            else
+            {
+                printf("b>c>a");
+            }
+        }
+        else
+        {
+            printf("c>b>a");
+        }
+    }
+    return 0;
+}
+
+//Give a grade to  a student-----------------------------------------<12>
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("Enter the number:\n");
+    scanf("%d", &num);
+    char Grade = (num >= 80) ? 'A' : (num >= 60) ? 'B'
+                                 : (num >= 45)   ? 'C'
+                                 : (num >= 30)   ? 'D'
+                                                 : 'F';
+    printf("YOUR grade is:%3c\n", Grade);
+    return 0;
+}
+
+//1^1+2^2+3^2+3^2+4^2+..................+n^2 -print this----------------------------<13>
+#include <stdio.h>
+int main()
+{
+    int n, i, s = 0;
+    printf("Enter the number:\n");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        s = s + i * i;
+        printf("Your answer is:%d\n", s);
+    }
+    return 0;
+}
+
+//2+4+6+8+.............+98+100 -print this------------------------------------------<14>
+#include <stdoio.h>
+int main()
+{
+    int n, i, s = 0;
+    printf("Enter the number:\n");
+    scanf("%d", &n);
+    for (i = 2; i <= n; i = i + 2)
+    {
+        s = s + i;
+        printf("Your answer is:%d\n", s);
+    }
+    return 0;
+}
+
+//Made a salary chart of some school student's-----------------------------------------------<15>
+#include <stdio.h>
+int main()
+{
+    int Roll, Class, s;
+    printf("Enter your roll no.:\n");
+    scanf("%d", &Roll);
+    printf("ENter your class:\n");
+    scanf("%d", &Class);
+    s = (Roll >= 1 && Roll <= 10 && Class >= 5 && Class <= 8) ? 325 : (Roll >= 11 && Roll <= 40 && Class >= 5 && Class <= 8) ? 400
+                                                                  : (Roll >= 41 && Roll <= 100 && Class >= 5 && Class <= 8)  ? 500
+                                                                  : (Roll >= 101 && Class >= 5 && Class <= 8)                ? 550
+                                                                  : (Roll >= 1 && Roll <= 10 && Class >= 9 && Class <= 10)   ? 500
+                                                                  : (Roll >= 11 && Roll <= 40 && Class >= 9 && Class <= 10)  ? 550
+                                                                  : (Roll >= 41 && Roll <= 100 && Class >= 9 && Class <= 10) ? 600
+                                                                  : (Roll >= 101 && Class >= 9 && Class <= 10)               ? 650
+                                                                                                                             : 0;
+    printf("Your salary is $%4d\n", s);
+    return 0;
+}
+
+//summation of odd numbers from 1 to n----------------------------------------------<16>
+#include <stdio.h>
+int main()
+{
+    int n, i, s = 0;
+    printf("Enter the number:\n");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i = i + 2)
+    {
+        s = s + i;
+        printf("The summation is:%d\n", s);
+    }
+}
+
+//summation of digits of a given number( Using RECURSIVE FUNCTION )-------------------------------------<17>
+#include <stdio.h>
+int sum_of_digits(int a)
+{
+    if (a == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return (a % 10 + sum_of_digits(a / 10));
+    }
+}
+int main()
+{
+    int a;
+    printf("Enter the number:\n");
+    scanf("%d", &a);
+    printf("The summation of the digits of the given number:%d\n", sum_of_digits(a));
+    return 0;
+}
+
+//Find out the number is palindrome or not ( Using RECURSIVE FUNCTION )--------------------------------------<18>
+#include <stdio.h>
+int palindrome(int n, int s)
+{
+    if (n == 0)
+    {
+        return s;
+    }
+    else
+    {
+        s = s * 10 + n % 10;
+        return palindrome(n / 10, s);
+    }
+}
+int main()
+{
+    int s, n;
+    printf("Eneter the number:\n");
+    scanf("%d", &n);
+    s = palindrome(n, 0);
+    if (n == s)
+    {
+        printf("%d- this number is a palindrome", n);
+    }
+    else
+    {
+        printf("%d- this number is not a palindrome", n);
+    }
+    return 0;
+}
+
+//Find factorial of a given number-------------------------------------------------<19>
+#include <stdio.h>
+int fact(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n * fact(n - 1));
+    }
+}
+int main()
+{
+    int n;
+    printf("Enetr the number:\n");
+    scanf("%d", &n);
+    printf("The factorial of the %d is:%d\n", n, fact(n));
+    return 0;
+}
+
+//x^n - Print this value----------------------------------------------<20>
+#include <stdio.h>
+int Answer(int x, int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return (x * Answer(n - 1));
+    }
+}
+int main()
+{
+    int x, n;
+    printf("Enetr the number:\n");
+    scanf("%d", &x);
+    printf("Enter the power of the given number:\n");
+    scanf("%d", &n);
+    printf("THe answer of %2d ^ %2d is:%d\n", x, n, Answer(x, n));
+    return 0;
+}
+
+//Find out the number is Prime or not-------------------------------------------<21>
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    long int n;
+    int i, c = 0;
+    printf("Enter the number:");
+    scanf("%d", &n);
+    printf("\n");
+    if (n == 0 || n == 1)
+    {
+        printf("%d is neither prime nor composite number\n", n);
+    }
+    else
+    {
+        for (i = 2; i < sqrt(n); i++)
+        {
+            if (n % i == 0)
+            {
+                c = 1;
+                break;
+            }
+        }
+        if (c == 1)
+        {
+            printf("%d is a composite number\n", n);
+        }
+        else
+        {
+            printf("%d is a prime number\n", n);
+        }
+    }
+    return 0;
+}
+
+//calculate the sum of prime numbers in a given range------------------------------------<22>
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int start, end, i, k, c = 0, sum = 0;
+    printf("Enter the shortest number of the range:");
+    scanf("%d", &start);
+    printf("\n");
+    printf("Enter the biggest number of the range:");
+    scanf("%d", &end);
+    printf("\n");
+    for (i = start; i <= end; i++)
+    {
+        for (k = 2; k <= sqrt(i); k++)
+        {
+            if (i % k == 0)
+            {
+                c = 1;
+                break;
+            }
+        }
+        if (c == 0)
+        {
+            sum = sum + i;
+        }
+    }
+    printf("The sum is:%d\n", sum);
+    return 0;
+}
+
+//Fibonacci series to a certain number of elements------------------------------------------<23>
+#include <stdio.h>
+int main()
+{
+    int n, sum = 0, i = 0, j = 1;
+    printf("Enter the number:");
+    scanf("%d", &n);
+    printf("\n");
+    printf("Your required fibonacci series is:\n");
+    printf("%d\n%d\n", i, j);
+    for (int k = 3; k <= 15; k++)
+    {
+        sum = i + j;
+        printf("%d\n", sum);
+        j = sum;
+        i = j;
+    }
+    return 0;
+}
+
+//Fibonacci series to a certain number -----------------------------------------------<24>
+#include <stdio.h>
+int main()
+{
+    int num, sum = 0, a = 0, b = 1;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("\n");
+    printf("Your required fibonacci sereis is:");
+    printf("%d\n%d\n", a, b);
+    while (sum <= num)
+    {
+        sum = a + b;
+        printf("%d\n", sum);
+        b = sum;
+        a = b;
+    }
+    return 0;
+}
+
+//Find the - Nth term of the fibonacci series-----------------------------------<25>
+#include <stdio.h>
+int main()
+{
+    int num, a = 0, b = 1 printf("Enter the term:");
+    scanf("%d", &num);
+    printf("\n");
+    for (int i = 3; i <= num; i++)
+    {
+        sum = a + b;
+        a = b;
+        b = sum;
+    }
+    printf("The %d th term of the fibonacci series is: %d\n", num, b);
+    return 0;
+}
+
+//Find Armstrong number or not-------------------------------------------<26>
+#include <stdio.h>
+int armstrong(int b, int Arm_1)
+{
+    if (b == 0)
+    {
+        return Arm_1;
+    }
+    else
+    {
+        Arm_1 = Arm_1 + b % 10 * b % 10 * b % 10;
+        return (armstrong(b / 10, Arm_1));
+    }
+}
+int main()
+{
+    int b, Arm_1;
+    printf("Enter the number:\n");
+    scanf("%d", &b);
+    Arm_1 = armstrong(b / 10, 0);
+    if (b == Arm_1)
+    {
+        printf("%d is a Armstrong number\n", b);
+    }
+    else
+    {
+        printf("%d is not a Armstrong number\n", b);
+    }
+    return 0;
+}
+
+//How to make calculator--------------------------------------------------------<27>
+#include <stdio.h>
+int main()
+{
+    int x, n1, n2;
+    printf("Enter the 1st number:");
+    scanf("%d", n1);
+    printf("\n");
+    printf("Enter the 2nd number:");
+    scanf("%d", n2);
+    printf("\n");
+    printf("1.Use for multiplication\n");
+    printf("2.Use fpr division\n");
+    printf("3.Use for addition\n");
+    printf("4.Use for substraction\n");
+    printf("Enter your choice:");
+    scanf("%d", x);
+    printf("\n");
+    switch (x)
+    {
+    case 1:
+        printf("Your answer is: %d*%d=%d\n", n1, n2, n1 * n2);
+        break;
+    case 2:
+        printf("Your answer is: %d/%d=%d\n", n1, n2, n1 / n2);
+        break;
+    case 3:
+        printf("Your answer is: %d+%d=%d\n", n1, n2, n1 + n2);
+        break;
+    case 4:
+        if (n1 > n2)
+        {
+            printf("Your answer is: %d-%d=%d\n", n1, n2, n1 - n2);
+        }
+        else
+        {
+            printf("Your answer is: %d-%d=%d\n", n2, n1, n2 - n1);
+        }
+        break;
+    defailt:
+        printf("Your choice is wrong!\n");
+    }
+    return 0;
+}
+
+//Making a list of schools and the departments under them--------------------------<28>
+#include <stdio.h>
+int main()
+{
+    char x;
+    int y;
+    printf("A.School of science\n");
+    printf("B.School of commerce\n");
+    printf("Enter your choice:");
+    scanf("%c", x);
+    printf("\n");
+    switch (x)
+    {
+    case 'A':
+        printf("You choose: %c\n", x);
+        printf("1.Department of computer science and engineering\n");
+        printf("2.Department of electronics and communication\n");
+        printf("3. Department of food technology\n");
+        printf("Enter your choice:");
+        scanf("%d", y);
+        printf("\n");
+        switch (y)
+        {
+        case 1:
+            printf("So, you want to get admission in \"Department of computer science and engineering\"\n");
+            break;
+        case 2:
+            printf("So, you want to get admission in \"Department of electronics and communication\"\n");
+            break;
+        case 3:
+            printf("So, you want to get admission in \"Department of food technology\"\n");
+            break;
+        default:
+            printf("Your input is wrong!\n");
+        }
+        break;
+    case 'B':
+        printf("You choose: %c\n", x);
+        printf("1.Department of accountancy\n");
+        printf("2.Department of economy\n");
+        printf("3. Department of business study\n");
+        printf("Enter your choice:");
+        scanf("%d", y);
+        switch (y)
+        {
+        case 1:
+            printf("So, you want to get admission in \"Department of accountancy\"\n");
+            break;
+        case 2:
+            printf("So, you want to get admission in \"Department of economy\"\n");
+            break;
+        case 3:
+            printf("So, you want to get admission in \"Department of business study\"\n");
+            break;
+        default:
+            printf("Your input is wrong!\n");
+        }
+        break;
+    default:
+        printf("Be careful! Eneter the number properly\n");
+    }
+    return 0;
+}
+
+//n!+(n+1)!+(n+2)!+(n+3)!....................+m! -find the value----------------------------<29>
+#include <stdio.h>
+int factorial(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n * factorial(n - 1));
+    }
+}
+int main()
+{
+    int n, m, sum = 0;
+    printf("Enter the 1st numbetr:");
+    scanf("%d", &a);
+    printf("\n");
+    printf("Enter the 2nd numbetr:");
+    scanf("%d", &b);
+    printf("\n");
+    for (i = n; i <= m; i++)
+    {
+        sum += factorial(i);
+    }
+    int TOTAL = sum;
+    printf("The result is:%d\n", TOTAL);
+    return 0;
+}
+
+/*                               *
+                                 **
+                                 ***
+Print star & Reverse Star pattern****----------------------------------------------<30>
+                                 ****
+                                 ***
+                                 **  
+                                 *                                                     */
+#include <stdio.h>
+void star_pattern(int rows)
+{
+    for (int i = 1; i <= rows; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+void reverse_star_pattern(int rows)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 1; j <= (rows - i); j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int rows;
+    printf("Enter the number of ROWS :\n");
+    scanf("%d", &rows);
+    printf("1.Print star pattern\n");
+    printf("2.Print reverse star pattern\n");
+    printf("Enter your choice :");
+    scanf("%d", x);
+    printf("\n");
+    switch (x)
+    {
+    case 1:
+        star_pattern(rows);
+        break;
+        caseb 2 : reverse_star_pattern(rows);
+        break;
+    default:
+        printf("Your choice is wrong!\n");
+    }
+    return 0;
+}
+
+/*                  *****
+                     ****
+Print this pattern    ***---------------------------------------------------------<31>
+                       **
+                        *                                                         */
+#include <stdio.h>
+int main()
+{
+    int rows;
+    printf("Enter the number of ROWS: \n");
+    scanf("%d", &rows);
+    printf("\n");
+    for (int i = 0; i <= rows; i++)
+    {
+        for (int k = 1; k <= i; k++)
+            printf(" ");
+        for (int j = 1; j <= (rows - i); j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*                           *
+                            **
+Print this star pattern    ***--------------------------------------------<32>
+                          ****
+                         *****                                       */
+#include <stdio.h>
+int main()
+{
+    int rows;
+    printf("Enter the number of ROWS:");
+    scanf("%d", &rows);
+    printf("\n");
+    for (int i = 1; i <= rows; i++)
+    {
+        for (int k = 1; k <= (rows - i); k++)
+            printf(" ");
+        for (int j = 1; j <= i; j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+//Check that  145 = 1! +4! +5!---------------------------------------------------<33>
+#include <stdio.h>
+int fact(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n * fact(n - 1));
+    }
+}
+int main()
+{
+    int num, x, sum = 0;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("\n");
+    num = x;
+    while (x > 0)
+    {
+        int a = x % 10;
+        sum = sum + fact(a);
+        x = x / 10;
+    }
+    if (num == sum)
+        printf("It proves !\n");
+    else
+        printf("It is wrong !\n");
+    return 0;
+}
+
+//Check the number is Harshad / Niven number or not----------------------------------<34>
+#include <stdio.h>
+int main()
+{
+    int num, sum = 0;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("\n");
+    x = num;
+    while (x > 0)
+    {
+        sum = sum + x % 10;
+        x = x / 10;
+    }
+    if (num % sum == 0)
+        printf("It proves !\n");
+    else
+        printf("It is wrong !\n");
+    return 0;
+}
+
+// Calculate the value of = nCr ---------------------------------------------------<35>
+#include <stdio.h>
+int fact(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n * fact(n - 1));
+    }
+}
+int main()
+{
+    int n, r, nCr;
+    printf("Enter the number:");
+    scanf("%d", &n);
+    printf("\n");
+    printf("Enter the number:");
+    scanf("%d", &r);
+    printf("\n");
+    if (n > r)
+    {
+        nCr = fact(n) / (fact(n - r) * fact(r));
+        printf("Your result is %dC%d :%4d\n", n, r, nCr);
+    }
+    else
+    {
+        printf("Your input is wrong!\n");
+    }
+    return 0;
+}
+
+/*                            *
+                             *** 
+                            *****
+                           *******
+Print Diamond structure   ********* ----------------------------------------------------------<36>
+                           *******
+                            *****
+                             ***
+                              *                                 */
+#include <stdio.h>
+int main()
+{
+    int rows, i, j, k, x, a, b, c, y;
+    printf("Enter the number of ROWS:");
+    scanf("%d", &rows);
+    printf("\n");
+    for (i = 1; i < rows; i++)
+    {
+        for (k = 1; k <= (rows - i); k++)
+            printf(" ");
+        for (j = 1; j <= i; j++)
+            printf("*");
+        for (x = 1; x < i; x++)
+            printf("*");
+        printf("\n");
+    }
+    for (a = 0; a < rows; a++)
+    {
+        for (b = 1; b <= a; b++)
+            printf(" ");
+        for (c = 1; c <= (rows - a); c++)
+            printf("*");
+        for (y = 1; y < (rows - a); y++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*                 *********   
+                    *******
+ Print a Triangle    ***** ------------------------------------------------------------<37>
+                      ***
+                       *
+                  
+*/
+#include <stdio.h>
+int main()
+{
+    int a, b, c, rows, x;
+    printf("Enter the number of ROWS:");
+    scanf("%d", &rows);
+    printf("\n");
+    for(i=0;a<rows;a++
+    {
+        for (b = 1; b <= a; b++)
+            printf(" ");
+        for (c = 1; c <= (rows - a); c++)
+            printf("*");
+        for (x = 1; x < (rows - a); x++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+//Make a list of 3 drivers of their NAME, ID, ROUTE , TOTAL COST using Structure---------------<38>
+#include <stdio.h>
+struct Driver
+{
+    char name[45];
+    char id[34];
+    char route[40]; // WE CAN ALSO USE 'Union' IN THE PLACE OF 'Struct' - to print only one
+    int total_cost;
+} d1, d2, d3;
+int main()
+{
+    struct Driver d1, d2, d3;
+    printf("\nEnter the NAME of d1 no. driver:");
+    scanf(" %[^\n]", &d1.name);
+    printf("\nEnter the NAME of d2 no. driver:");
+    scanf(" %[^\n]", &d2.name);
+    printf("\nEnter the NAME of d3 no. driver:");
+    sacnf(" %[^\n]", &d3.name);
+    printf("\nEnter the ID of d1 no. driver");
+    scanf("%s", &d1.id);
+    printf("\nEnter the ID of d2 no. driver");
+    scanf("%s", &d2.id);
+    printf("\nEnter the ID of d3 no. driver");
+    scanf("%s", &d3.id);
+    printf("\nThe ROUTE travel by the d1 no. driver is:");
+    scanf("%s", &d1.route);
+    printf("\nThe ROUTE travel by the d2 no. driver is:");
+    scanf("%s", &d2.route);
+    printf("\nThe ROUTE travel by the d3 no. driver is:");
+    scanf("%s", &d3.route);
+    printf("\nThe TOTAL COST of d1 no. driver is: ");
+    scanf("%d", &d1.total_cost);
+    printf("\nThe TOTAL COST of d2 no. driver is: ");
+    scanf("%d", &d2.total_cost);
+    printf("\nThe TOTAL COST of d3 no. driver is: ");
+    scanf("%d", &d3.total_cost);
+    printf("\n--------------Following information of those three drivers are-----------------------");
+    printf("FOR D1 DRIVER:\n Name of the driver:%s\n", d1.name);
+    printf("ID of that driver:%s\n", d1.id);
+    printf("Route of travel:%s\n", d1.route);
+    printf("Travel cost:%d\n", d1.total_cost);
+    printf("\n\n");
+    printf("FOR D2 DRIVER:\n Name of the driver:%s\n", d2.name);
+    printf("ID of that driver:%s\n", d2.id);
+    printf("Route of travel:%s\n", d2.route);
+    printf("Travel cost:%d\n", d2.total_cost);
+    printf("\n\n");
+    printf("FOR D3 DRIVER:\n Name of the driver:%s\n", d3.name);
+    printf("ID of that driver:%s\n", d3.id);
+    printf("Route of travel:%s\n", d3.route);
+    printf("Travel cost:%d\n", d3.total_cost);
+    return 0;
+}
+
+/*Input:
+ <h1 shvdsbkffh>    This is a heading  </h1> 
+ Output:
+ This is a heading-------------------------PARSER THIS-------------------------------------<39>
+*/
+#include <stdio.h>
+#include <string.h>
+void parser(char string[])
+{
+    int in = 0; //Variable weither we are in the tag or not
+    int index = 0;
+    for (int i = 0; i < strlen(string); i++)
+    {
+        if (string[i] == '<')
+        {
+            in = 1;
+        }
+        continue;
+        else if (string[i] == '>')
+        {
+            in = 0;
+        }
+        if (in == 0)
+        {
+            string[index] = string[i + 1];
+            index++;
+        }
+    }
+    //Removing the spaces from the beginning
+    while (string[0] == ' ')
+    {
+        for (i = 0; i < strlen(string); i++)
+        {
+            string[i] = string[i + 1];
+        }
+    }
+    //Remove the spaces from the end of the string
+    while (string[strlen(string) - 1] = ' ')
+    {
+        string[strlen(string) - 1] = '\0';
+    }
+}
+int main()
+{
+    char string[40];
+    printf("Enter your required HTML tag:");
+    puts(string);
+    printf("\n");
+    parser(string);
+    printf("Your result is:--%s--\n", string);
+    return 0;
+}
+
+/*
+1
+12
+123       Print this----------------------------------------------------------------------<40>
+1234
+12345                                              */
+#include <stdio.h>
+int main()
+{
+    int i, j, rows, x;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", rows);
+    for (i = 1, x = 1; i <= rows; i++)
+    {
+        for (j = 1; j <= i; j++)
+            printf("x++");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+12345
+1234   Print this----------------------------------------------------------------------------<41>
+123
+12
+1                                                       */
+#include <stdio.h>
+int main()
+{
+    int i, j, rows, x;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 0, x = 1; i < rows; i++)
+    {
+        for (j = 1; j <= (rows - i); j++)
+            printf("x++");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*  
+     1
+    12
+   123   Print this-------------------------------------------------------------------<41>
+  1234   
+ 12345                                 */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, x;
+    printf("Enter the no. of ROWS:")
+        scanf("%d", &rows);
+    for (i = 1, x = 1; i <= rows; i++)
+    {
+        for (j = 1; j <= (rows - i); j++)
+            printf(" ");
+        for (k = 1; k <= i; k++)
+            printf("x++");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+12345
+ 1234
+  123  Print this-----------------------------------------------------------------------<42>
+   12
+    1                                             */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, x;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 0; x = 1; i < rows; i++)
+    {
+        for (j = 1; j < i; j++)
+            printf(" ");
+        for (k = 1; k <= (rows - i); k++)
+            printf("x++");
+        printf("\n");
+    }
+    return 0;
+}
+
+/* 
+ 54321
+  4321
+   321 Print this----------------------------------------------------------------------<43>
+    21
+     1                                         */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, x;
+    printf("Enter the no. pof ROWS:");
+    scanf("%d", &rows);
+    for (i = 0; x = rows; i < rows; i++; x--)
+    {
+        for (j = 1, j < i; j++)
+            printf(" ");
+        for (k = 1; k <= (rows - i); k++)
+            printf("x--");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+5
+44
+333  Print this-------------------------------------------------------------------------<44>
+2222
+11111                                                 */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, x;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 1, x = rows; i <= rows; i++, x--)
+    {
+        for (j = 1; j <= i; j++)
+            printf("x");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+1
+22
+111  Print this-------------------------------------------------------------------------<45>
+2222
+11111                                                   */
+#include <stdio.h>
+int main()
+{
+    int i, j, rows, x;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 1; i <= rows; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            if (i % 2 == 0)
+                printf("2");
+            else
+                printf("1");
+        }
+    }
+    return 0;
+}
+
+/*
+     1
+    121
+   12321   Print this--------------------------------------------------------------------<46>
+  1234321
+ 123454321                                                           */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, y;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 1, y = 1; i <= rows; i++, y++)
+    {
+        for (k = 1; k <= (rows - i); k++)
+            printf(" ");
+        for (int x = 1, j = 1; j <= i; j++)
+            printf("x++");
+        for (int l = 1; l < i; l++)
+            printf("y--")
+                printf("\n");
+    }
+    return 0;
+}
+
+/*
+123454321
+ 1234321
+  12321   Print this----------------------------------------------------------------------<47>
+   121
+    1                                                                */
+#include <stdio.h>
+int main()
+{
+    int a, b, c, rows, x, l;
+    printf("Enter the no. of Rows:");
+    scanf("%d", &rows);
+    for (i = 0; y = (rows - 1); i < rows; i++; y--)
+    {
+        for (j = 1; j <= i; j++)
+            printf(" ");
+        for (k = 1; x = 1; k <= (rows - i); k++)
+            printf("x++");
+        for (l = 1; l < (rows - i); l++)
+            printf("y--");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*  
+     1
+    121
+   12321   
+  1234321
+ 123454321   Print this-----------------------------------------------------------------<48>
+  1234321
+   12321   
+    121
+     1                                   */
+#include <stdio.h>
+int main()
+{
+    int i, j, k, rows, y;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 1, y = 1; i < rows; i++; y++)
+    {
+        for (k = 1; k <= (rows - i); k++)
+            printf(" ");
+        for (int x = 1, j = 1, ; j <= i; j++)
+            printf("x++");
+        for (int l = 1; l < i; l++)
+            printf("y--")
+                printf("\n");
+    }
+    for (i = 0, y = (rows - 1); i < rows; i++; y--)
+    {
+        for (j = 1; j <= i; j++)
+            printf(" ");
+        for (k = 1; x = 1; k <= (rows - i); k++)
+            printf("x++");
+        for (l = 1; l < (rows - i); l++)
+            printf("y--");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+*        *
+**      **
+***    ***
+****  ****
+**********  Print this-----------------------------------------------------------------------<49>
+****  ****
+***    ***
+**      **
+*        *                                            */
+#include <stdio.h>
+int main()
+{
+    int rows, i, j, k, l;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 1; i < rows; i++)
+    {
+        for (j = 1; j <= i; j++)
+            printf("*");
+        for (k = 1; k <= (2 * rows - 2i); k++)
+            printf(" ");
+        for (l = 1; l <= i; l++)
+            printf("*");
+        printf("\n");
+    }
+    int a, b, c, d, x;
+    for (a = 0; a < rows; a++)
+    {
+        for (b = 1; b <= (rows - i); j++)
+            printf("*");
+        for (c = 1; c <= (2 * rows - 2 * (rows - i)); c++)
+            printf("*");
+        for (d = 1; d <= (rows - i); d++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+/*
+**********
+****  ****
+***    ***
+**      **     
+*        *    Print this--------------------------------------------------------------------<50>
+**      **
+***    ***
+****  ****
+**********                                               */
+#include <stdio,h>
+ingt main()
+{
+    int a, b, c, x, d, rows;
+    printf{"Enter the no. of ROWS:"};
+    scanf("%d", &rows);
+    printf("\n");
+    for (a = 0; a < rows; a++;)
+    {
+        for (b = 1; b <= (rows - a); b++)
+            printf("*");
+        for (c = 1; c <= (2 * rows - 2 * (rows - a)); x++)
+            printf(" ");
+        for (d = 1; d <= (rows - a); d++)
+            printf("*");
+        printf("\n");
+    }
+    int i, j, k, l;
+    for (i = 1; i <= rows; i++)
+    {
+        for (j = 1; j <= i; j++)
+            printf("*");
+        for (k = 1; k <= (2 * rows - 2 * i); k++)
+            printf(" ");
+        for (l = 1; l <= i; l++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+//Using Dynamic Memory Allocation  (malloc/ calloc,realloc,free)---------------------------------------<51>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int *a1;
+    int n, x;
+    printf("Enter the no. of elements:");
+    scanf("%d", &n);
+    a1 = (int *)calloc(n, sizeof(int)); // OR we can use this format__syntax: ptr=(int*)malloc(n*sizeof(int))
+    for (int i = 0; i < n; i++)
+    {
+        printf("The %d no. element of the array is:", i);
+        scanf("%d", &a1[i]);
+        printf("\n");
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("The %d no. element of the array is: %d\n", i, a1[i]);
+    }
+    free(a1);
+    printf("Enter the no. of elements:");
+    scanf("%d", &x);
+    a1 = (int *)realloc(a1, x * sizeof(int));
+    for (int i = 0; i < x; i++)
+    {
+        printf("The %d no. element of the array is:", i);
+        scanf("%d", &a1[i]);
+        printf("\n");
+    }
+    for (int i = 0; i < x; i++)
+    {
+        printf("The %d no. element of the array is: %d\n", i, a1[i]);
+    }
+    return 0;
+}
+
+//Convert several lines of lowercase into uppercase--------------------------------------------------<52>
+#include <stdio.h>
+#include <stdlib.h>
+char main()
+{
+    char *ptr;
+    int i, j, n, x;
+    printf("No. of lines:\n");
+    scanf("%d", x);
+    for (i = 1; i <= x; i++)
+    {
+        printf("Enter the no. of elements:\n");
+        scanf("%d", &n);
+        ptr = (char *)malloc(n * sizeof(char));
+        printf("Following statement is:\n\n");
+        scanf("%[^\n]", ptr);
+        for (j = 0; j < n; j++)
+        {
+            putchar(toupper(ptr[j]));
+        }
+        free(ptr);
+        ptr = (char *)realloc(ptr, 70 * sizeof(char));
+        printf("\n");
+    }
+    return 0;
+}
+
+//Repeated averaging of a list of non-zero numbers given by user----------------------------------------------<53>
+#include <stdio.h.
+int main()
+{
+    int i, j, loops, loopcount, avg = 0;
+    float sum = 0.0;
+    int *ptr;
+    printf("Enter the no. of LOOPS: ");
+    scanf("%d", loops);
+    printf("\n\n");
+    for (loopcount = 1; loopcount <= loops; loopcount++)
+    {
+        printf("HOw many numbers you need?");
+        scanf("%d", &i);
+        ptr = (float *)malloc(i * sizeof(float));
+        printf("Enter the following numbers:\n");
+        for (j = 1; j <= i; j++)
+        {
+            scanf("%4f\n", ptr[j]);
+        }
+        if (ptr[j] > 0)
+        {
+            sum += ptr[j];
+            ++avg;
+        }
+        else
+        {
+            continue;
+        }
+        printf("Average of the non-zer numbers in the given list is: %3f", sum / avg);
+        printf("\n\n");
+        free(ptr);
+        ptr = (float *)realloc(ptr, *sizeof(float));
+    }
+    return 0;
+}
+
+/*
+Encoding a string of characters
+(We will replace all the digits and letters with the next character)------------------<54> */
+#include <stdio.h>
+char main()
+{
+    char arr[50];
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        scanf("%[^\n]", arr);
+    }
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        if ((arr[i] >= 'a' && arr[i] < 'z') || (arr[i] >= 'A' && arr[i] < 'Z') || (arr[i] >= '0' && arr[i] < '9'))
+            putchar(arr[i] += 1);
+        else if (arr[i] == 'z')
+            putchar('a');
+        else if (arr[i] == 'Z')
+            putchar('A');
+        else if (arr[i] == '9')
+            putchar('0') else putchar('.')
+    }
+    return 0;
+}
+
+//Calculating depreciation with the help of three methods----------------------------------------------<55>
+#include <stdio.h>
+int main()
+{
+    int year, n, amount, i, dep;
+    printf("Enter the NET AMOUNT:");
+    scanf("%d", &amount);
+    printf("\n");
+    printf("Enter the total time period:");
+    scanf("%d", &year);
+    printf("\n");
+    printf("1.Calculate the depreciation using Straight-line method !\n");
+    printf("2.Calculate the depreciation using Double-declining balance method !\n");
+    printf("3.Calculate the depreciation using Sum of the year's digits method !\n");
+    printf("Enter your choice:");
+    scanf("%d", &i);
+    printf("\n");
+    switch (i)
+    {
+    case 1:
+        printf("Your choice is 1\n");
+        dep = amount / year;
+        for (n = 1; n <= year; n++)
+        {
+            amount -= dep;
+            printf("Year no. %d", n);
+            printf("\t Depreciation %d", dep);
+            printf("\t Present AMOUNT %d", amount);
+            printf("\n");
+        }
+        break;
+    case 2:
+        printf("Your choice is 2\n");
+        for (n = 1; n <= year; n++)
+        {
+            dep = (2 / year) * amount;
+            amount -= dep;
+            printf("Year no. %d", n);
+            printf("\t Depreciation %d", dep);
+            printf("\t Present AMOUNT %d", amount);
+            printf("\n");
+        }
+        break;
+    case 3:
+        printf("Your choice is 3\n");
+        for (n = 1; n <= year; n++)
+        {
+            dep = (year - n + 1) / ((n * (n + 1)) / 2);
+            amount -= dep;
+            printf("Year no. %d", n);
+            printf("\t Depreciation %d", dep);
+            printf("\t Present AMOUNT %d", amount);
+            printf("\n");
+        }
+        break;
+    default:
+        printf("Your choice is wrong!\n");
+    }
+    return 0;
+}
+
+//Rearrange the numbers in a given list-------------------------------------------------------<56>
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+    int a[] = {1, 54, 9, 4, 76};
+    int temp = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("element %d :%3d\n", i, a[i]);
+    }
+    printf("\n");
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = i + 1; j < 5; j++)
+        {
+            if (a[i] > a[j])
+            {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        printf(" %d", a[i]);
+    }
+    return 0;
+}
+
+/*Addition of two 2D Arrays
+&                               -------------------------------------------------------------<57>
+Multiplication of two arrays                */
+#include <stdio.h>
+int main()
+{
+    int i, j, rows, colms;
+    int *arr1[rows], *arr2[rows], *arr3[rows];
+    printf("Enter the no. of ROW in each array:");
+    scanf("%d", &i);
+    printf("\n");
+    printf("Enter the no. of COLOUMN in each array:");
+    scanf("%d", &j);
+    printf("\n\n");
+    for (i = 0; i < rows; i++)
+    {
+        arr1[rows] = (int *)malloc(colms * sizeof(int));
+        arr2[rows] = (int *)malloc(colms * sizeof(int));
+        arr3[rows] = (int *)malloc(colms * sizeof(int));
+    }
+    printf("%1 No. ARRAY:\n");
+    for (rows = 0; rows < i; rows++)
+    {
+        for (colms = 0; colms < j; colms++)
+        {
+            printf("Element of %dno. ROW and %dno. COLOUMN is:" j, k);
+            scanf(" %3d", *(*(arr1 + rows) + colms));
+            printf("\n");
+        }
+    }
+    printf("\n\n");
+    printf("%2 No. ARRAY:\n");
+    for (rows = 0; rows < i; rows++)
+    {
+        for (colms = 0; colms < j; colms++)
+        {
+            printf("Element of %dno. ROW and %dno. COLOUMN is:" j, k);
+            scanf(" %3d", *(*(arr2 + rows) + colms));
+            printf("\n");
+        }
+    }
+    printf("\n\n");
+    printf("Result of addition of 3 arrays is:\n");
+    for (rows = 0; rows < i; rows++)
+    {
+        for (colms = 0; colms < j; colms++)
+        {
+            printf("Element of %dno. ROW and %dno. COLOUMN is:%4d" j, k);
+            scanf(" %3d", *(*(arr1 + rows) + colms) + *(*(arr2 + rows) + colms));
+            printf("\n");
+        }
+    }
+    free(arr1);
+    free(arr2);
+    free(arr3);
+    for (rows = 0; rows < i; rows++)
+    {
+        arr1[rows] = (int *)realloc(arr1, colms * sizeof(int));
+        arr2[rows] = (int *)realloc(arr2, colms * sizeof(int));
+        arr3[rows] = (int *)realloc(arr3, colms * sizeof(int));
+    }
+}
+/*
+*           *
+  *       *
+    *   *
+      *        Print this-------------------------------------------------------------------<58>
+    *   *
+  *       *
+*           *                                               */
+#include <stdio.h>
+int main()
+{
+    int rows, i, j;
+    prtff("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    printf("\n");
+    for (i = 1; i <= 2 * rows; i++) //For the upper portion of this pattern
+    {
+        for (j = 1; j <= 2 * rows; j++)
+        {
+            if (j == (rows + 1) - i || j == i)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+    }
+    return 0;
+}
+
+/*
+******
+*    *
+*    * 
+*    *   Print this---------------------------------------------------------------<59>
+*    *
+******                           */
+#include <stdio.h>
+int main()
+{
+    int rows, i, j;
+    printf("Enter the no. of ROWS:");
+    scanf("%d", &rows);
+    for (i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < rows; j++)
+        {
+        }
+    }
+}
+
+//Insert New value in the array (sorted list)-------------------------------------<60>
+#include <stdio.h>
+int main(void)
+{
+    int a[20];
+    int num, n;
+    int p = 0;
+    printf("Enter how many number of elements in the array:\n");
+    scanf("%d", &n);
+    printf("Following array elelments:--->\n");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("element %d :\n", i);
+        scanf("%d", &a[i]);
+        printf("\n");
+    }
+    printf("\n");
+    printf("Enter the element you want to enter in the array:\n");
+    scanf("%d", &num);
+    for (int i = 0; i < n; i++)
+    {
+        if (num < a[i])
+        {
+            p = i;
+        }
+        else
+        {
+            p = i + 1;
+        }
+    }
+    if (p < 5)
+    {
+        for (int i = 5; i >= p; i--)
+        {
+            a[i] = a[i - 1];
+            a[p] = num;
+        }
+    }
+    else
+    {
+        a[n] = num;
+    }
+    for (int i = 0; i < (n + 1); i++)
+    {
+        printf(" %d", a[i]);
+    }
+    return 0;
+}
+
+/* Insert New value in the array (unsorted list )-------------------------------------<61>
+Input the Position, where the value to be inserted in the array : 2          */
+#include <stdio.h>
+int main()
+{
+    int a[] = {2, 5, 7, 9};
+    int num, pos;
+    printf("Enter the number that you want to insert:\n");
+    scanf("%d" & num);
+    primtf("Enter in which positiomn you want to insert:\n");
+    scanf("%d", &pos);
+    for (int i = 0; i < 4; i++)
+    {
+        if (pos == i)
+        {
+            int temp = a[i];
+            a[i] = num;
+            num = temp;
+        }
+    }
+    for (int i = 4; i >= pos; i--)
+    {
+        a[i] = a[i - 1];
+        a[pos] = num;
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d", a[i]);
+    }
+    return 0;
+}
+
+/*  Delete an element at desired position from an array----------------------------------------<63>
+Input the position where to delete: 3          */
+#include <stdio.h>
+int main()
+{
+    int a[10];
+    int n, pos;
+    printf("Enter the number of elements:\n");
+    scanf("%d", &n);
+    printf("Enter the array elements:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("Element %d: %d", i);
+        scanf("%d", &a[i]);
+        printf("\n");
+    }
+    printf("Enter the position of the number what you want to delete:");
+    scanf("%d", &pos);
+    for (int i = 0; i < n; i++)
+    {
+        if (i == pos)
+        {
+            a[pos] = a[i + 1];
+        }
+        ++pos;
+    }
+    for (int i = 0; i < n - 1; i++)
+    {
+        printf("%d", a[i]);
+    }
+    return 0;
+}
+
+//Find the second largest element in an array-----------------------------------------<64>
+#include <stdio.h>
+int main()
+{
+    int a[] = {3, 4, 5, 7, 8};
+    int i, temp = 0;
+    for (i = 0; i < 5; i++)
+    {
+        printf("element %d: \n", i);
+        scanf("%d", &a[i]);
+        printf("\n");
+    }
+    int max = a[0];
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = i + 1; j < 5; j++)
+        {
+            if (a[i] > a[j])
+            {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    printf("Your required answer is:%2d\n ", a[3]);
+    return 0;
+}
+
+//find the second smallest element in an array. --------------------------------------<65>
+#include <stdio.h>
+int main()
+{
+    int a[20];
+    int num;
+    printf("Enter the number of elements:\n");
+    scanf("%d" & num);
+    for (int i = 0; i < num; i++)
+    {
+        printf("Element %d : ", i);
+        scanf("%d", &num);
+        printf("\n");
+    }
+    for (int i = 0; i < (num - 1); i++)
+    {
+        for (int j = i + 1; j < num; j++)
+        {
+            if (a[i] > a[j])
+            {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    printf("the second smallest element in an array is:%d", a[1]);
+    return 0;
+}
+
+//Find transpose of a given matrix.-----------------------------------------------------<66>
+#include <stdio.h>
+int main()
+{
+    int arr1[50][50], brr1[50][50], i, j, r, c;
+    printf("\nInput the rows and columns of the matrix : ");
+    scanf("%d & %d", &r, &c);
+    printf("Input elements in the first matrix :\n");
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("element - [%d],[%d] : ", i, j);
+            scanf("%d", &arr1[i][j]);
+        }
+    }
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            brr1[j][i] = arr1[i][j];
+        }
+    }
+    printf("\n\nThe transpose of a matrix is : ");
+    for (i = 0; i < c; i++)
+    {
+        printf("\n");
+        for (j = 0; j < r; j++)
+        {
+            printf("%3d", brr1[i][j]);
+        }
+    }
+    return 0;
+}
+
+// Find sum of right diagonals of a matrix-------------------------------------------<67>
+#include <stdio.h>
+int main()
+{
+    int a[50][50], i, j, r, c, sum = 0;
+    printf("\nInput the rows and columns of the matrix : ");
+    scanf("%d & %d", &r, &c);
+    printf("Input elements in the  matrix :\n");
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            printf("ELement of %2d-row & %2d-column is:", i, j);
+            scanf("%d", &a[i][j]);
+        }
+        for (i = 0; i < r; i++)
+        {
+            for (j = 0; j < c; j++)
+            {
+                if (i == j)
+                {
+                    sum = sum + a[i][j];
+                }
+            }
+        }
+        printf("The result is:%3d\n", sum);
+        return 0;
+    }
+
+// Find sum of rows an columns of a Matrix--------------------------------------------------<68>
+#include <stdio.h>
+    int main()
+    {
+        int a[10][10], b[10][10];
+        int rows, cols, r, c, sum = 0;
+        printf("\nInput the rows of the matrix : ");
+        scanf("%d", &r);
+        printf("\nInput the rows of the matrix : ");
+        scanf("%d", &c);
+        printf("Input elements in the  matrix :\n");
+        for (int rows = 0; rows < r; rows++)
+        {
+            for (int cols = 0; cols < c; cols++)
+            {
+                printf("Element of %3d-row & %3d-col is : ", rows, cols);
+                scanf("%2d", &a[rows][cols]);
+                printf("\n");
+            }
+            printf("\n\n");
+        }
+        for (int rows = 0; rows < r; rows++)
+        {
+            for (int cols = 0; cols < c; cols++)
+            {
+                b[rows][cols] = a[rows][cols];
+                sum = sum + a[rows][cols];
+                printf("Element of %3d-row & %3d-col is : %d\n", rows, cols, b[rows][cols]);
+            }
+            printf("Element of %3d-row & %3d-col is : %d", (rows + 1), (cols + 1), sum);
+            printf("\n\n");
+        }
+        return 0;
+    }
+
+//Sum of the left diagonal of the matrix-------------------------------------------<69>
+#include <stdio.h>
+    int main()
+    {
+        int a[10][10];
+        int rows, sum = 0;
+        printf("Enter the number of rows:\n");
+        scanf("%d", &rows);
+        printf("Enter the value of the elements in the matrix: \n");
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < rows; j++)
+            {
+                printf("Elements %2d-rows & %2d-column is:");
+                scanf("%3d", &a[i][j]);
+                printf("\n");
+            }
+        }
+        print("Answer:\n");
+        for (int i = 0, int j = rows; i < rows, j >= 0; i++, j--)
+        {
+            sum = sum + a[i][j];
+        }
+        printf("The sum of the left diagonal of the matrix is:%3d", sum);
+        return 0;
+    }
+
+//Find the sum of rows an columns of a Matrix------------------------------------------<70>
+#include <stdio.h>
+#define MAX 50
+    int main()
+    {
+        int a[MAX][MAX], b[MAX], c[MAX];
+        int r;
+        printf("Enter the no. of rows:");
+        scanf("%d", &r);
+        printf("Enter the elements of the matrix:\n");
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                printf("Element %d-row & %d-col : \n", i, j);
+                scanf("%3d", &a[i][j]);
+            }
+        }
+        for (int i = 0; i < r; i++)
+        {
+            b[i] = 0;
+            for (int j = 0; j < r; j++)
+            {
+                b[i] = b[i] + a[i][j];
+            }
+        }
+        for (int j = 0; j < r; j++)
+        {
+            c[j] = 0;
+            for (int i = 0; i < r; i++)
+            {
+                c[j] = c[j] + a[j][i];
+            }
+        }
+        for (int i = 0; i < r; i++)
+        {
+            printf("\n");
+            for (int j = 0; j < r; j++)
+            {
+                printf("%d\t", a[i][j]);
+                printf("%6d", b[i]);
+            }
+        }
+        printf("\n");
+        for (int j = 0; j < r; j++)
+        {
+            printf("%d\t", c[j]);
+        }
+        return 0;
+    }
+
+//Print the lower triangular of a given matrix, set 0 in lower triangular matrix-----------------------<71>
+#include <stdio.h>
+#define MAX 50
+    int main()
+    {
+    int a[MAX]][MAX];
+    int r;
+    printf("Enter the no. of rows:");
+    scanf("%d", &r);
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            printf("element of %2d-row & %2d-column:", i, j);
+            scanf("%2d", &a[i][j]);
+            printf("\n");
+        }
+    }
+    for (int i = 1; i < r; i++)
+    {
+        for (int j = 0; j <= i - 1; j++)
+        {
+            a[i][j] = 0;
+        }
+    }
+    for (int i = 0; i < r; i++)
+    {
+        printf("\n");
+        for (int j = 0; j < r; j++)
+        {
+            printf("%2d", a[i][j]);
+        }
+    }
+    return 0;
+    }
+
+//print or display upper triangular matrix----------------------------------------------<72>
+#include <stdio.h>
+#define MAX 50
+    int main()
+    {
+    int a[MAX]][MAX];
+    int r;
+    printf("Enter the no. of rows:");
+    scanf("%d", &r);
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            printf("element of %2d-row & %2d-column:", i, j);
+            scanf("%2d", &a[i][j]);
+            printf("\n");
+        }
+    }
+    for (int i = 0; i < r - 1; i++)
+    {
+        for (int j = (r - 1); j >= (i + 1); j--)
+        {
+            a[i][j] = 0;
+        }
+    }
+    for (int i = 0; i < r; i++)
+    {
+        printf("\n");
+        for (int j = 0; j < r; j++)
+        {
+            printf("%2d", a[i][j]);
+        }
+    }
+    return 0;
+    }
+
+//calculate determinant of a matrix-------------------------------------------<73>
+#include <stdio.h>
+#define MAX 50
+    int main()
+    {
+        int a[MAX][MAX];
+        int r, deter = 0;
+        printf("Enter how many no. of rows you want:");
+        scanf("%d", &r);
+        printf("\n");
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                printf("element of %2d-row & %2d-column:", i, j);
+                scanf("%2d", &a[i][j]);
+                printf("\n");
+            }
+        }
+        for (int i = 0; i < r; i++)
+        {
+            deter = deter + (arr1[0][i] * (arr1[1][(i + 1) % 3] * arr1[2][(i + 2) % 3] - arr1[1][(i + 2) % 3] * arr1[2][(i + 1) % 3]));
+        }
+        printf("The determinant of the matrix is:%3d", deter);
+        return 0;
+    }
+
+//Determine whether it is a sparse matrix--------------------------------------<74>
+#include <stdio.h>
+#define MAX 50
+    int main()
+    {
+        int a[MAX][MAX];
+        int r;
+        int zero = 0;
+        int non_zero = 0;
+        printf("Enter how many no. of rows you want:");
+        scanf("%d", &r);
+        printf("\n");
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                printf("element of %2d-row & %2d-column:", i, j);
+                scanf("%2d", &a[i][j]);
+                printf("\n");
+            }
+        }
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                if (a[i][j] == 0)
+                    ++zero;
+                else
+                    ++non_zero;
+            }
+        }
+        if (zero >= non_zero)
+            printf("It is a sparse matrix!\n");
+        else
+            printf("It is not a sparse matrix!\n");
+        return 0;
+    }
+
+ 
