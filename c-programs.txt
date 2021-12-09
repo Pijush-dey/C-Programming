@@ -178,6 +178,53 @@ Print the lower triangular of a given matrix, set 0 in lower triangular matrix--
 print or display upper triangular matrix----------------------------------------------<72>
 calculate determinant of a 3 x 3 matrix-----------------------------------------------<73>
 Determine whether it is a sparse matrix-----------------------------------------------<74>
+Two matrices and check whether they are equal-----------------------------------------<75>
+Check whether a given matrix is an identity matrix------------------------------------<76>
+Find the majorty number in the array--------------------------------------------------<77>
+Find the element occurring odd number of times in an array.---------------------------<78>
+Find the missing number from a given array--------------------------------------------<79>
+         Merge one sorted array into another sorted array.
+Pivot element is the only element in input array which is smaller than it's previous element.
+A pivot element divided a sorted rotated array into two monotonically increasing array.--------------<80> 
+Rotate an array by N positions--------------------------------------------------------<81>
+Print next greater elements in a given unsorted array.--------------------------------<82>
+Find the Floor and Ceil of the number 0 to 10 from a sroted array--------------------<83>
+print next greater elements in a given unsorted array.
+Elements for which no greater element exist, consider next greater element as -1.----------------<84>
+Find the two repeating elements in a given array--------------------------------------<85>
+Find two elements whose sum is closest to zero----------------------------------------<86>
+Print a matrix in spiral form---------------------------------------------------------<87>
+Count the number of triangles can be fromed from a given array------------------------<88>
+Find the number of times (frequency) occurs a given number in an array.---------------<89>
+Sort an array of 0s, 1s and 2s--------------------------------------------------------<90>
+Move all zeroes to the end of a given array-------------------------------------------<91>
+Find the row with maximum number of 1s in a matrix------------------------------------<92>
+Find the median of two sorted arrays of same size-------------------------------------<93>
+Sorting of the even elements in a array-----------------------------------------------<94>
+Re-arrange Even and Odd Elements of An Array------------------------------------------<95>
+Find the product of an array such that product is equal to the
+product of all the elements of arr[] except arr[i]------------------------------------<96>     
+count the number of inversion in a given array----------------------------------------<97>
+Search an element in a row wise and column wise sorted matrix-------------------------<98>
+Return maximum sum such that no two elements are adjacent-----------------------------<99>
+Print all unique elements of an unsorted array---------------------------------------<100>
+Sum of lower triangular elements of a matrix-----------------------------------------<101>
+Find largest number possible from the set of given numbers---------------------------<102>
+Find four array elements whose sum is equal to given number--------------------------<103>
+Count all distinct pairs for a specific difference-----------------------------------<104>
+Find the minimum distance between two numbers in a given array-----------------------<105>
+Count all possible paths from top left to bottom right of a m X n matrix-------------<106>
+Find the maximum n – m such that array[n] > array[m] from a given array[]------------<107>
+Find the equilibrium index of an array-----------------------------------------------<108>
+Rearrange the given array so that arr[i] becomes arr[arr[i]]-------------------------<109>
+Find the maximum for each and every contigious subarray of size k from a given array.-----<110>
+Find the index of first peak element in a given array--------------------------------<111>
+Write a program in C to rearrange an array such that arr[i]=i. 
+N.B.: Given array contains N elements, from 0 to N – 1. All elements within the range may
+not be present in the array. There will be -1 if an element within 
+the range is not present in the array.-----------------------------------------------<112>
+Rearrange an array in such an order that– smallest, largest, 2nd smallest, 2nd largest and on--------<113>
+Update every array element with multiplication of previous and next numbers in array.----------------<114>
 
 */
 
@@ -479,7 +526,6 @@ int main()
 }
 
 //2+4+6+8+.............+98+100 -print this------------------------------------------<14>
-#include <stdoio.h>
 int main()
 {
     int n, i, s = 0;
@@ -1579,7 +1625,6 @@ int main()
 ***    ***
 ****  ****
 **********                                               */
-#include <stdio,h>
 ingt main()
 {
     int a, b, c, x, d, rows;
@@ -1880,15 +1925,7 @@ int main()
             printf("\n");
         }
     }
-    free(arr1);
-    free(arr2);
-    free(arr3);
-    for (rows = 0; rows < i; rows++)
-    {
-        arr1[rows] = (int *)realloc(arr1, colms * sizeof(int));
-        arr2[rows] = (int *)realloc(arr2, colms * sizeof(int));
-        arr3[rows] = (int *)realloc(arr3, colms * sizeof(int));
-    }
+    return 0;
 }
 /*
 *           *
@@ -2430,4 +2467,1546 @@ int main()
         return 0;
     }
 
- 
+//Two matrices and check whether they are equal----------------------------------------<75>
+#include <stdio.h>
+#define MAX 3
+    int main()
+    {
+        int a[][3] = {2, 3, 4, 5, 6, 7, 8, 9, 1};
+        int b[MAX][MAX];
+        printf("Enter the no. of row:");
+        scanf("%d", &r);
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                printf("element of %d-row & %d-column is:", i, j);
+                scanf("%d", &b[i][j]);
+                printf("\n");
+            }
+        }
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < r; j++)
+            {
+                if (a[i][j] != b[i][j])
+                {
+                    printf("The matrices are not equal!\n");
+                    break;
+                }
+                else
+                {
+                    if (((i + 1) * (j + 1)) == r * r)
+                    {
+                        printf("The matrices are equal!\n");
+                    }
+                }
+            }
+            return 0;
+        }
+
+//Check whether a given matrix is an identity matrix----------------------------------<76>
+#include <stdio.h>
+#define MAX
+        int main()
+        {
+            int a[MAX][MAX];
+            int i, j, r;
+            printf("Enter the no. of rows:");
+            scanf("%d", &r);
+            printf("\n");
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < r; j++)
+                {
+                    printf("Enter the value of %2d-row & %2d-col. is:", i, j);
+                    scanf("%d", &a[i][j]);
+                    printf("\n");
+                }
+            }
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < r; j++)
+                {
+                    if (int i == j && a[i][j] != 1)
+                    {
+                        printf("The matrix is not a identical matrix.\n");
+                        break;
+                    }
+                    else if (int i != j && a[i][j]!=0)
+                    {
+                        printf("The matrix is not a identical matrix.\n");
+                        break;
+                    }
+                    else
+                    {
+                        if(((i+1)*(j+1))==r*r)
+                        {
+                            printf("The matrix is a identical matrix.\n");
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+
+//Find the majorty number in the array-------------------------------------------<77>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX];
+    int x,MaxNum,maj=1,count=0;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&x);
+    printf("\n");
+    for(int i=0;i<x;i++)
+    {
+            printf("Elements of %2d no. is:",i);
+            scanf("%d",&a[i]); 
+            printf("\n");
+    }
+    for(int i=0;i<x;i++)
+    {
+       int count=0;
+       for(int j=0;j<x;j++)
+       {
+           if(a[i]==a[j])
+           {
+               ++count;
+           }
+       }
+       if(count>maj)
+       {
+           maj=count;
+           MaxNum=a[i];
+       }
+    }
+    if(maj==1)
+    {
+        printf("There is no major elementin the array\n");
+    }
+    else
+    {
+        printf("The majority element of the array is:%2d",MaxNum);
+    }
+    return 0;
+}
+
+//Find the element occurring odd number of times in an array.------------------------------<78>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+   int a[MAX];
+   int r,NUM;
+   printf("Enter the no. of rows:");
+   scanf("%d",&r);
+   printf("\n");
+   for(int i=0;i<r;i++)
+   {
+     printf("element of %2d-no. is:",i);
+     scanf("%d",&a[i]);
+     printf("\n");
+   }
+   for(int i=0;i<r;i++)
+   {
+       int count=0;
+       for(int j=0;j<r;j++)
+       {
+           if(a[i]==a[j])
+           {
+               ++count;
+           }
+       }
+       if(count%2!=0)
+       {
+           NUM=a[i];
+       }
+   }
+    printf("Answer:%2d",NUM);
+   return 0;
+}
+
+//Find the missing number from a given array-------------------------------------------<79>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,sum;
+    printf("Enter how many elements will be in arrays:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of%3d no. array is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<num;i++)
+    {
+        sum=sum+a[i];
+    }
+    printf("The missing number is:%d",(((a[0]+a[num-1])*(((a[num-1]-a[0])+1)/2))-sum));
+    return 0;
+}
+
+/* Merge one sorted array into another sorted array. 
+Pivot element is the only element in input array which is smaller than it's previous element.
+A pivot element divided a sorted rotated array into two monotonically increasing array. 
+--------------------------------------------------------------------------------------------------<80>   
+*/
+#include<stdio.h>
+#define MAX 100
+int main()
+{
+    int a[MAX],b[MAX],c[MAX];
+    int x,y
+    printf("Enter the no. of elements in the LARGE array:");
+    scanf("%d",&x);
+    printf("\n");
+    for(int i=0;i<x;i++)
+    {
+        printf("element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the no. of elements in the SMALL array:");
+    scanf("%d",&y);
+    printf("\n");
+    for(int i=0;i<y;i++)
+    {
+        printf("element of %d-no. is:",i);
+        scanf("%d",&b[i]);
+        printf("\n");
+    }
+    for(int i=0;i<(x+y);i++)
+    {
+        if(i%2==0)
+        {
+            c[i]=a[i];
+        }
+        else
+        {
+            c[i+1]=b[i];
+        }
+    }
+    printf("After merged the new Array is :\n");
+    for(int i=0;i<(x+y);i++)
+    {
+        printf("%2d",c[i]);
+    }
+    return 0;
+}
+
+/* Rotate an array by N positions:-
+The given array is : 0 3 6 9 12 14 18 20 22 25 27
+From 4th position the values of the array are : 12 14 18 20 22 25 27
+Before 4th position the values of the array are : 0 3 6 9
+After rotating from 4th position the array is:
+12 14 18 20 22 25 27 0 3 6 9----------------------------------------------------------<81> */
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],b[MAX];
+    int N,r;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Elements of %2d no. is:",i);
+        scanf("%d",&a[i]); 
+        printf("\n");
+    }
+    printf("From which position the elements will be rotate:");
+    scanf("%d",&N);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        if(i==N)
+        {
+            for(int i=0;i<N;i++)
+            {
+                b[i]=a[i];
+            }
+            for(int i=0;i<(r-N);i++)
+            { 
+                a[i]=a[i+N];
+            }
+        }
+    }
+    for(int i=0;i<(r-N);i++)
+    {
+        printf("%2d\n",a[i]);
+    }
+    for(int i=0;i<N;i++)
+    {
+        printf("%2d\n",b[i]);
+    }
+    return 0;
+}
+
+//Find the ceiling in a sorted array------------------------------------------<82>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX];
+    int num,r
+    printf("Enter the number of elements in the array:");
+    scnaf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:");
+        scanf("%2d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the number ::");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        if(num<=a[i])
+        {
+            printf("The ceiling of %2d is:%2d",num,a[i]);
+            break;
+        }
+        else
+        {
+            printf("Your choice is wrong!\n");
+        }
+    }
+    return 0;
+}
+
+//Find the Floor and Ceil of the number 0 to 10 from a sroted array------------------------------------<83>
+#include<stdio.h>
+#define MAX 50
+int ceil_1(int a[],int c)
+{
+        for(int i=0;i<7;i++)
+        {
+          if(c<=a[i])
+          {
+          return a[i];
+            break;
+          }
+        }
+}
+int floor_1(int d[],int b)
+{
+        for(int j=0;j<7;j++)
+        {
+          if(d[j]=b)
+          {
+            return d[j];
+            break;
+          }
+          else if (b<d[j])
+          {
+            return (b-1); 
+            break;
+          }
+        }
+}
+int main()
+{
+    int a[MAX],r;
+    printf("Enter how ,many element you want to insert:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %2d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<10;i++)
+    {
+        printf("Number:%d:",i);
+        printf("\t Ciel:%d",ceil_1(a,i));
+        printf("\t Floor:%d",floor_1(a,i));
+        printf("\n");
+    }
+    return 0;
+}
+
+/* Print next greater elements in a given unsorted array. 
+Elements for which no greater element exist, consider next greater element as -1.----------------------<84>
+ */
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX]num,num1;
+    printf("Enter how many elements will be in array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of%3d-no,. is:");
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the value :");
+    scanf("%d",&num1);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        if(num1<=a[i])
+        {
+            printf("Next bigger element of %d in the array is: %d",num1,a[i]);
+            break;
+        }
+        else
+        {
+            printf("Next bigger element of %d in the array is: -1",num1);
+            break;
+        }
+    }
+    return 0;
+}
+
+//Find the two repeating elements in a given array-------------------------------------<85>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,count=1;
+    printf("Enter how many elements will be in array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<(num-1);i++)
+    {
+        for(int j=0;j<num;j++)
+        {
+            if(a[i]=a[j])
+            {
+                ++count;
+            }
+        }
+        if(count>1)
+        {
+        printf("The repeating element is:%d\n",a[i]);
+        }
+    }
+    return 0;
+} 
+
+//Find two elements whose sum is smaller than others----------------------------------------<86>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,b1,b2,sum,sum1;
+    printf("Enter the no. of elemnts you want to add in the array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %d-no. is:");
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    b1=a[0];
+    b2=a[1];
+    sum=b1+b2;
+    for(int i=0;i<(num-1);i++)
+        {
+            for(int j=(i+1);j<num;j++)
+            {
+                sum1=a[i]+a[j];
+                if(sum>sum1)
+                {
+                    sum=sum1;
+                    b1=a[i];
+                    b2=a[j];
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+        }
+    printf("Your required answer is:%3d&%3d",b1,b2);
+    return 0;
+}
+
+/* Write a program in C to print a matrix in spiral form. 
+Expected Output :
+The given array in matrix form is :
+1  2  3  4  5
+6  7  8  9  10
+11 12 13 14 15
+16 17 18 19 20
+The spiral form of above matrix is:
+1 2 3 4 5 10 15 20 19 18 17 16 11 6 7 8 9 14 13 12   ----------------------------------<87> */
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX][MAX],r;
+    printf("Enter the no. of rows:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            printf("Enter the element of %2d-no. row &%2d-no. col. is:",i,j);
+            scanf("%d",&a[i][j]);
+            printf("\n");
+        }
+    }
+    printf("The matrix is:\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("\n");
+        for(int j=0;j<r;j++)
+        {
+            printf("%3d",a[i][j]);
+        }
+    }
+    printf("\nThe spiral form of matrix is:\n");
+    while(row<r)
+    {
+    int row=0,col1=0,col=(r-1);
+    for(int i=row;i<r;i++)
+    {
+        printf("%3d",a[row][i]);
+    }
+    ++row;
+    for(int i=row;i<r;i++)
+    {
+        printf("%3d",a[i][col]);
+    }
+    --col;
+    for(int i=(r-2);i>=0;i--)
+    {
+        printf("%3d",a[r-1][i]);
+    }
+    for(int i=(r-2);i>=row;i--)
+    {
+        printf("%3d",a[i][col1]);
+    }
+    ++row1;
+    }
+    return 0;
+}
+
+//Count the number of triangles can be fromed from a given array--------------------------<88>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,b1,b2,sum,sum1;
+    printf("Enter the no. of elemnts you want to add in the array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %d-no. is:");
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+
+
+
+    
+//Find the number of times (frequency) occurs a given number in an array.-------------------------<89>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,r,count=1;
+    printf("Enter the no. of element in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:",r);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the no. you want:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        if(num==a[i])
+        {
+            ++count;
+        }
+    }
+    printf("The number of times the number %d occurs in the given array is:%d",num,count);
+    return 0;
+}
+
+//Check whether an array is subset of another array.--------------------------------------<90>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],b[MAX],r1,r2,in=0;
+    printf("Enter the no. of element in the 1st array:");
+    scanf("%d",&r1);
+    printf("\n");
+    for(int i=0;i<r1;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the no. of element in the 2nd array:");
+    scanf("%d",&r2);
+    printf("\n");
+    for(int i=0;i<r2;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&b[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r2;i++)
+    {
+            if(b[i]!=a[i])
+            {
+                in=0;
+                break;
+            }
+            else
+            {
+                in=1;
+            }
+    }
+    if(in==1)
+    printf("The 2nd array is subset of 1st array!\n");
+    else
+     printf("The 2nd array is not the subset of 1st array!\n");
+    return 0;
+}
+
+//Move all zeroes to the end of a given array-----------------------------------------<91>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],r;
+    printf("Enter the no. of array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r;i++)
+    {
+        if(a[i]==0)
+        {
+            int temp=a[i];
+            for(int j=i;j<r;j++)
+            {
+                a[j]=a[j+1];
+            }
+            a[r-1]=temp;
+        }
+    }
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+    printf("%3d",a[i]);
+    }
+    return 0;
+}
+
+//Find the row with maximum number of 1s in a matrix--------------------------------------<92>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX][MAX],r;
+    printf("Enter the no. of row: ");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            printf("Element of%3d-row &%3d-col. is:");
+            scanf("%d",&r);
+            printf("\n");
+        }
+    }
+    int row=0,max=1,count=0;
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            if(a[i][j]==1)
+            {
+                ++count;
+            }
+            if(max<count)
+            {
+                max=count;
+                row=i;
+            }
+        }
+    }
+    printf("The index of row with maximum 1s is:%d",row);
+    return 0;
+}
+
+//Find the median of two sorted arrays of same size------------------------------------------<93>
+#include<stdio.h>
+#define MAX 50
+int mani()
+{
+    int a[MAX],b[MAX],c[MAX],num1,num2,
+    printf("Enter the no. of elements in the 1st array:");
+    scanf("%d",&num1);
+    printf("\n");
+    for(int i=0;i<num1;i++)
+    {
+        printf("Element of %3d-no. is:");
+        scanf("%2d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the no. of elements in the 1st array:");
+    scanf("%d",&num2);
+    printf("\n");
+    for(int i=0;i<num2;i++)
+    {
+        printf("Element of %3d-no. is:");
+        scanf("%2d",&b[i]);
+        printf("\n");
+    }
+    for(int i=0;i<(num1+num2);i++)
+    {
+        if(i%2==0)
+        {
+            c[i]=(a[i]>b[i])?a[i]:b[i];
+        }
+        else 
+        {
+            c[i]=(a[i]>b[i])?b[i]:a[i];
+        }
+    }
+}
+
+
+//Sorting of the even elements in a array----------------------------------------<94>
+#include <stdio.h>
+#define MAX 50
+int main() 
+{
+    int a[MAX],num,i,c[MAX],even=0;
+    printf("Enter the no. of elements:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %2d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<num;i++)
+    {
+        if(i%2==0)
+        {
+              c[even]=a[i];
+               even++;
+              }
+    }
+    printf("The array is:\n");
+    for(int j=0;j<even;j++)
+    {
+    printf("%3d",c[j]);
+    }
+    return 0;
+}
+
+//Re-arrange Even and Odd Elements of An Array---------------------------------------<95>
+#include<stdio.h>
+#define MAX 50
+int main() 
+{
+    int a[MAX],num,i,c[MAX],even=0;
+    printf("Enter the no. of elements:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %2d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<num;i++)
+    {
+        if(a[i]%2==0)
+        {
+            int temp=a[i];
+            for(int j=i;j<num-1;j++)
+            {
+            a[j]=a[j+1];
+            }
+            a[num-1]=temp;
+            ++even;
+        }
+    }
+    int min1=a[num-even];
+    for(int i=(num-even);i<(num-1);i++)
+    {
+        for(int j=i+1;j<num;j++)
+        {
+            if(a[i]>a[j])
+            {
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;   
+            }
+        }
+    }
+    int min2=a[0];
+    for(int i=0;i<((num-even)-1);i++)
+    {
+        for(int j=(i+1);j<(num-even);j++)
+        {
+            if(a[i]>a[j])
+            {
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;   
+            }
+        }
+    }
+    printf("The array is:\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("%3d",a[i]);
+    }
+    return 0;
+}
+
+/*Find the product of an array such that product is equal to the
+product of all the elements of arr[] except arr[i]------------------------------------<96>     */
+#include<stdio.h>
+#define MAX 50
+int main() 
+{
+    int a[MAX],num,Product[MAX];
+    printf("Enter the no. of elements:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %2d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+printf("product of an array such that product is equal to the product of all the elements of arr[] except arr[%d]\n",i);
+for(int i=0;i<num;i++)
+{
+    for(int j=0;j<i;j++)
+    {
+        Product[i]=Product[i]*a[j];
+    }
+    for(int j=i+1;j<num;j++)
+    {
+        Product[i]=Product[i]*a[j];
+    }
+}
+printf("The product array is:\n");
+for(int i=0;i<num;i++)
+{
+printf("%5d",Product[i]);
+}
+return 0;
+}
+
+//count the number of inversion in a given array----------------------------------------<97>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,count=0;
+    printf("Enter the no. of elements:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %2d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("The inversions are:\n");
+    for(int i=0;i<num-1;i++)
+    {
+       for(int j=i+1;j<num;j++)
+        {
+           if(a[i]>a[j])
+           {
+            printf("(%d,%d)",a[i],a[j]);
+            count++;
+           }
+        } 
+    }
+    printf("The number of inversion can be formed from the array is:%2d"count);
+    return 0;
+}
+
+//Search an element in a row wise and column wise sorted matrix---------------------------<98>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX][MAX],r,num;
+    printf("Enter the no. of rows of the matrix:");
+    scanf("%d",r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            printf("Element of %3d-no. row &%3d-no. col. is:",i,j);
+            scanf("%d",&a[i][j]);
+            printf("\n");
+        }
+    }
+    printf("The given value for searching is:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<r;j++)
+        {
+            if(a[i][j]==num)
+            {
+                printf("The element Found at the position in the matrix is: %2d,%2d\n",i,j);
+            }
+        }
+    }
+    return 0;
+}
+
+//Return maximum sum such that no two elements are adjacent-----------------------------------<99>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],sum1,sum2,num;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %3d-mo. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<num;i=i+2)
+    {
+        sum1=sum1+a[i];
+    }
+    for(int i=1;i<num;i=i+2)
+    {
+        sum2=sum2+a[i];
+    }
+    printf("The maximum sum such that no two elements are adjacent is:%3d",(sum1>=sum2)?sum1:sum2);
+    return 0;
+}
+
+/*
+Print all unique elements of an unsorted array.
+Expected output :1 5 8 5 7 3 2 4 1 6 2
+Unique Elements in the given array are:----------------------------------------------<100>
+1 5 8 7 3 2 4 6                                                              */
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,count=0;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %3d-mo. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<num-1;i++)
+    {
+        for(int j=i+1;j<num;j++)
+        {
+            if(a[i]==a[j])
+            {
+                ++count;
+                for(int k=j;k<num-1;k++)
+                {
+                a[k]=a[k+1];
+                }
+            }
+        }
+    }
+    printf("Unique elements of the array is:");
+    for(int i=0;i<(num-count);i++)
+    {
+        printf("%3d",a[i]);
+    }
+    return 0;
+}
+
+//Sum of lower triangular elements of a matrix-----------------------------------------<101>
+#define MAX 50
+int main()
+{
+    int a[MAX][MAX],num,sum;
+    printf("Enter the no. of rows in the matrix:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<num;j++)
+        {
+            printf("Element of%3d-no. row%=&%d-no. col. is:",i,j);
+            scanf("%d",&a[i][j]);
+            printf("\n");
+        }
+    }
+     for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<num;j++)
+        {
+          if(i>r)
+          {
+              sum=sum+a[i][j];
+          }
+        }
+    }
+    printf("sum of lower triangular elements of a matrix:%3d",sum);
+    return 0;
+}
+
+//Find largest number possible from the set of given numbers---------------------------------<102>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&num);
+    printf("\n");
+    for(int i=0;i<num;i++)
+    {
+        printf("Element of %3d-mo. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("The largest number possible from the set of given numbers is:\n");
+    for(int i=0;i<num-1;i++)
+    {
+        for(int j=0;j<num;j++)
+        {  
+        if(a[i]<a[j])
+        {
+          int temp=a[i];
+          a[i]=a[j];
+          a[j]=temp;
+        }
+    }
+    for(int i=0;i<num;i++)
+    {
+    printf("%d",a[i]);
+    }
+    return 0;
+}
+
+//Find four array elements whose sum is equal to given number-------------------------------<103>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,r;
+    printf("Enter the no. of elements of the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %2d-no. is:");
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the no.:");
+    scanf("%d",&num);
+    printf("\n");
+    printf("The elements are:\n");
+    for(int i=0;i<r-3;i++)
+    {
+        for(int j=i+1;j<r-2;j++)
+        {
+            for(int k=j+1;k<r-1;k++)
+            {
+               for(int l=k+1;l<r;l++)
+               {
+                   if(a[i]+a[j]+a[k]+a[l]==num)
+                   {
+                       printf("%d,%d,%d,%d\n",a[i],a[j],a[k],a[l]);
+                       break;
+                   }
+               }
+            }
+        }
+    }
+    return 0;
+}
+
+//Count all distinct pairs for a specific difference----------------------------------<104>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],num,r;
+    printf("Enter the no. of elements in array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+    printf("element of %2d-no. is:",i);
+    scanf("%d",&a[i]);
+    printf("\n");
+    }
+    for(int i=0;i<r-1;i++)
+    {
+        for(int j=i+1;j<r;j++)
+        {
+            if(a[i]>a[j])
+            {
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("The re-arranged array is:\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("%d",a[i]);
+    }
+    printf("Enter the no. of specific difference:");
+    scanf("%d",&num);
+    printf("\n");
+    printf("The distinct pairs for difference %d are:\n",num);
+    for(int i=0;i<r-1;i++)
+    {
+        for(int j=i+1;j<r;j++)
+        {
+            if(a[i]+num==a[j])
+            {
+                printf("(%d , %d)",a[i],a[j]);
+            }
+        }
+    }
+    return 0;
+}
+
+/*
+Find the minimum distance between two numbers in a given array. 
+Expected Output:
+The given array is:
+7 9 5 11 7 4 12 6 2 11
+The minimum distance between 7 and 11 is: 1---------------------------------------------<105>*/
+#include<stdio.h>
+#define MAX 50
+ int main()
+ {
+     int a[MAX],num1,num2,dif1,dif2,grade;
+     printf("Enter the no. of elements in the array:");
+     scanf("%d",&num);
+     printf("\n");
+     for(int i=0;i<num;i++)
+     {
+         printf("Element of %d-no. is:",i);
+         scanf("%d",&a[i]);
+         printf("\n");
+     }
+     printf("Enter the no. of 1st element:");
+     scanf("%d",&num1);
+     printf("\n");
+     printf("Enter the no. of 2st element:");
+     scanf("%d",&num2);
+     printf("\n");
+     for(int i=0;i<num-1;i++)
+     {
+        for(int j=i+1;j<num;j++)
+        {
+            if(num1==a[i]&&num2==a[j])
+            {
+                dif1=j-i;
+                dif2=(10+i)-j;
+                grade=(dif1>dif2)?dif2:dif1;
+                break;
+            }
+            else
+            {
+                printf("You entered wrong value!!!!\n");
+                break;
+            }
+        }
+     }
+     printf("The minimum distance between %d and %d is:%2d\n",num1,num2,grade);
+     return 0;
+ }
+
+//Count all possible paths from top left to bottom right of a m X n matrix-------------------------<106>
+
+
+
+
+
+//Find the maximum n – m such that array[n] > array[m] from a given array[]-----------------------<107>
+#include<stdio.h>
+#define MAX 50
+ int main()
+ {
+     int a[MAX],num,dif,max=1;
+     printf("Enter the no. of elements in the array:");
+     scanf("%d",&num);
+     printf("\n");
+     for(int i=0;i<num;i++)
+     {
+         printf("Element of %d-no. is:",i);
+         scanf("%d",&a[i]);
+         printf("\n");
+     }
+     for(int i=0;i<num-1;i++)
+    {
+        for(int j=i+1;j<num;j++)
+        {
+            if(a[i]<a[j])
+            {
+                dif=j-i;
+                if(dif>max)
+                {
+                    max=dif;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+        }
+    }
+    printf("The maximum differcences between two position of array index is:%3d",max);
+return 0;
+}  
+
+/*Find the equilibrium index of an array(The array can be
+ split in a position where the sum of both side are equal)----------------------------------<108>*/
+#include<stdio.h>
+#define MAX 50 
+int main()
+{
+    int a[MAX],b[MAX],r;
+    printf("Enter the no. of array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of%3d-no. is:");
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    b[0]=a[0];
+    for(int i=1;i<r;i++)
+    {
+        b[i]=b[i-1]+a[i];
+    }
+    int sum=a[r-1];
+    printf("The equilibrium index of an array:\n");
+    for(int i=r-1;i>=0;i--)
+    {
+        if(sum==b[i])
+        {
+            printf("%d",i);
+        }
+        sum=sum+a[i];
+    }
+    return 0;
+}
+
+/*Given an array of size n such that every element is in the range from 0 to n-1.
+Write a program in C to rearrange the given array so that arr[i] becomes arr[arr[i]]--------------<109>*/
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],b[MAX],r;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of%3d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r;i++)
+    {
+        b[i]=a[a[i]];
+    }
+    printf("The modified array is:");
+    for(int i=0;i<r;i++)
+    {
+        printf("%d",b[i]);
+    }
+    return 0;
+}
+
+//Find the maximum for each and every contigious subarray of size 'num' from a given array.------------<110>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],r,num;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of%3d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("Enter the size of the subarray:");
+    scanf("%d",&num);
+    printf("\n");
+    printf("The contigious subarray of length 4 and their maximum value are:\n");
+    if(num<r)
+    {
+    for(int k=0;k<(r-num)+1;k++)
+    {
+    for(int i=k;i<k+num;i++)
+    {
+       printf("%3d",a[i]);
+    }
+       printf("---->");
+       int max=a[k];
+       for(int i=k;i<k+num;i++)
+       {
+           if(max<a[i])
+           {
+               max=a[i];
+           }
+       }
+       printf(" %2d",max);
+    }
+    }
+    else
+    {
+       printf("You enetered wrong no.!");
+    }
+    return 0;
+}
+
+//Find the index of first peak element in a given array----------------------------------<111>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],r;
+    printf("Enter the no. of elemnts in the array is:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Enter %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    printf("The index of first peak element in the array is:");
+    for(int i=0;i<r;i++)
+    {
+        if(a[i-1]<a[i]&&a[i]<a[i+1])
+        {
+            printf("%d",a[i]);
+        }
+        else if(a[i]>a[i+1])
+        {
+            printf("%d",a[i]);
+        }
+    }
+    return 0;
+}
+
+/*Write a program in C to rearrange an array such that arr[i]=i.
+                                                       ^^^^^^^^^
+N.B.: Given array contains N elements, from 0 to N – 1.
+All elements within the range may not be present in the array. 
+There will be -1 if an element within the range is not present in the array-----------------------<112>*/
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],r,count=0;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Enter %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r;i++)
+    {
+        if(a[i]!=i)
+        {
+            for(int j=i+1;j<r;j++)
+            {
+                if(a[j]==i)
+                {
+                    int temp=a[j];
+                    a[j]=a[i];
+                    a[i]=temp;
+                }   
+                else
+                {
+                    a[i]=-1;
+                }   
+            }
+        }
+    }
+    printf("The modified array is:\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("%3d",a[i]);
+    }  
+return 0;
+}
+
+//Rearrange an array in such an order that– smallest, largest, 2nd smallest, 2nd largest and on--------<113>
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],r;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r-1;i++)
+    {
+        if(i%2==0)
+        {
+        for(int j=i+1;j<r;j++)
+        {
+            if(a[i]>a[j])
+            {
+            int temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+            }
+        }
+        }
+        else
+        {
+        for(int j=i+1;j<r;j++)
+        { 
+            if(a[i]<a[j])
+            {
+            int temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+            }
+        }
+        }
+    }
+    printf("The modified array:\n");
+    for(int i=0;i<r;i++)
+    {
+    printf("%3d",&a[i]);
+    }
+    return 0;
+}
+
+/*Write a program in C to Update every array element with multiplication of previous and next numbers in array. Go to the editor
+Expected Output:
+The given array is:
+1 2 3 4 5 6
+The new array is:
+2 3 8 15 24 30 ------------------------------------------------------<114>*/
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+    int a[MAX],b[MAX],r;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r;i++)
+    {
+        if(i==0)
+        {
+            b[i]=a[i]*a[i+1];
+        }
+        else if(i==r)
+        {
+            b[i]=a[i]*a[i-1];
+        }
+        else
+        {
+            b[i]=a[i-1]*a[i+1];
+        }
+    }
+    printf("The modified array:\n");
+    for(int i=0;i<r;i++)
+    {
+    printf("%3d"b[i]);
+    }
+    return 0;
+}
+
+/*Rearrange an array such that
+ even index elements are smaller and odd index elements are greater than their next-----------------<115>*/
+ #include<stdio.h>
+ #define MAX 50
+int main()
+{
+    int a[MAX],b[MAX],r;
+    printf("Enter the no. of elements in the array:");
+    scanf("%d",&r);
+    printf("\n");
+    for(int i=0;i<r;i++)
+    {
+        printf("Element of %d-no. is:",i);
+        scanf("%d",&a[i]);
+        printf("\n");
+    }
+    for(int i=0;i<r;i=i+2)
+    {
+      if(a[i]>a[i+1])
+      {
+          int temp=a[i];
+          a[i]=a[i+1];
+          a[i+1]=temp;
+      }
+    }
+    return 0;
+}
