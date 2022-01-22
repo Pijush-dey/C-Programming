@@ -1,8 +1,6 @@
 /*    AUTHOR: Pijush Kishor Dey
      COLLAGE: Calcutta Institute of Engineering & Management [B.Tech 1st year - C.S.E]
 
-             OUR TARGET IS WRITE PROGRAM IN A OPTIMISE WAY - MEMORY EFFICIENT
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             OUR TARGET IS TO DO PROGRAMMING IN A OPTIMISE WAY - MEMORY EFFICIENT
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    
@@ -526,6 +524,7 @@ int main()
 }
 
 //2+4+6+8+.............+98+100 -print this------------------------------------------<14>
+#include <stdio.h>
 int main()
 {
     int n, i, s = 0;
@@ -1625,6 +1624,7 @@ int main()
 ***    ***
 ****  ****
 **********                                               */
+#include <stdio.h>
 ingt main()
 {
     int a, b, c, x, d, rows;
